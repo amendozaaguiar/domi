@@ -16,7 +16,10 @@ class CreateSchedulesTable extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->time('time', $precision = 0);
-            $table->tinyInteger('maximum_allocation');
+            $table->tinyInteger('maximum_allocation')
+                ->default('0');
+            $table->tinyInteger('allocations')
+                ->default('0');
             $table->timestamps();
         });
     }

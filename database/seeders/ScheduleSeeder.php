@@ -22,6 +22,7 @@ class ScheduleSeeder extends Seeder
             $schedule = new Schedule;
                 $schedule->time = $time->format('H:i:s');
                 $schedule->maximum_allocation = 8;
+                $schedule->allocations = 0;
             $schedule->save();
 
             $time->modify('+30 minute');

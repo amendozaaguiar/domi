@@ -18,11 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!--livewire-->
+    <livewire:styles />
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white shadow-sm">
+                <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -45,7 +48,7 @@
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-                            
+
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -72,12 +75,14 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 
         <main class="py-4">
-            @yield('content')
+             @yield('content')
+            <livewire:scripts />
         </main>
+        @yield('js')
     </div>
 </body>
 </html>
