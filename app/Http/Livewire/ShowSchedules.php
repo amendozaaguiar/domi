@@ -53,7 +53,7 @@ class ShowSchedules extends Component
             }
             else
             {
-                session()->flash('message-danger', 'No ha podido se asignar el domiciliario, el limite de '.$this->schedule->maximum_allocation.' ha sido superado.');
+                session()->flash('message-danger', 'No se ha podido asignar el domiciliario, el limite de '.$this->schedule->maximum_allocation.' ha sido superado.');
             }
         }
         else
