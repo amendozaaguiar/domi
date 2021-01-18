@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+
+    //Seeder de la tabla de agendas
     public function run()
     {
         $this->call([
