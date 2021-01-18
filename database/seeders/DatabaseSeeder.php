@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     //Seeder de la tabla de agendas
     public function run()
     {
+        //Seeder de la Agenda
         $this->call([
             ScheduleSeeder::class
         ]);
